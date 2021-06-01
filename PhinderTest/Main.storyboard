@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Picker View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerViewController" id="Y6W-OH-hqX" customClass="DatePickerViewController" customModule="PhinderTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQl-OC-TYZ">
+                                <rect key="frame" x="0.0" y="596" width="414" height="266"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vB0-GG-ddB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ENj-8L-gOi">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                            </datePicker>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="azy-Us-4qQ">
+                                                <rect key="frame" x="0.0" y="216" width="414" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGi-j7-UZk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="j1T-xG-6uo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancelButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3f6-bc-LNF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDL-Bs-ZEl">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="ZEw-A2-Xs7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <state key="normal" title="Done">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="doneButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="g7N-Ms-5IE"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="bDL-Bs-ZEl" secondAttribute="bottom" id="0RT-1f-pJu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bDL-Bs-ZEl" secondAttribute="trailing" id="F9O-Fp-0ai"/>
+                                                    <constraint firstItem="ZGi-j7-UZk" firstAttribute="leading" secondItem="azy-Us-4qQ" secondAttribute="leading" id="KHg-H0-N9v"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZGi-j7-UZk" secondAttribute="bottom" id="kmh-Kj-BkQ"/>
+                                                    <constraint firstItem="bDL-Bs-ZEl" firstAttribute="top" secondItem="azy-Us-4qQ" secondAttribute="top" id="mHd-aM-O5O"/>
+                                                    <constraint firstItem="ZGi-j7-UZk" firstAttribute="top" secondItem="azy-Us-4qQ" secondAttribute="top" id="seB-aF-xoN"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vB0-GG-ddB" secondAttribute="bottom" id="9n2-E9-Flq"/>
+                                    <constraint firstItem="vB0-GG-ddB" firstAttribute="leading" secondItem="xQl-OC-TYZ" secondAttribute="leading" id="CQO-Te-yLK"/>
+                                    <constraint firstAttribute="height" constant="266" id="Djf-yg-nZ0"/>
+                                    <constraint firstItem="vB0-GG-ddB" firstAttribute="top" secondItem="xQl-OC-TYZ" secondAttribute="top" id="Mu7-Ew-TAq"/>
+                                    <constraint firstAttribute="trailing" secondItem="vB0-GG-ddB" secondAttribute="trailing" id="lG9-70-hBY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xQl-OC-TYZ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Hbm-d6-QIk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xQl-OC-TYZ" secondAttribute="bottom" id="ixt-z7-dcw"/>
+                            <constraint firstItem="xQl-OC-TYZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mgI-xH-FKG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="ENj-8L-gOi" id="yYG-Hm-iGK"/>
+                        <outlet property="doneButton" destination="bDL-Bs-ZEl" id="dhB-Zj-guv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
